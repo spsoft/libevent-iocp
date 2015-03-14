@@ -1,0 +1,289 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:732: checking for a BSD compatible install
+configure:785: checking whether build environment is sane
+configure:842: checking whether make sets ${MAKE}
+configure:888: checking for working aclocal
+configure:901: checking for working autoconf
+configure:914: checking for working automake
+configure:927: checking for working autoheader
+configure:940: checking for working makeinfo
+configure:964: checking for gcc
+configure:1077: checking whether the C compiler (gcc  ) works
+configure:1093: gcc -o conftest    conftest.c  1>&5
+configure:1119: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:1124: checking whether we are using GNU C
+configure:1133: gcc -E conftest.c
+configure:1152: checking whether gcc accepts -g
+configure:1195: checking for a BSD compatible install
+configure:1248: checking whether ln -s works
+configure:1270: checking how to run the C preprocessor
+configure:1291: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1351: checking whether gcc needs -traditional
+configure:1426: checking for Cygwin environment
+configure:1442: gcc -c -g -O2 -Wall  conftest.c 1>&5
+configure: In function `main':
+configure:1438: `__CYGWIN32__' undeclared (first use in this function)
+configure:1438: (Each undeclared identifier is reported only once
+configure:1438: for each function it appears in.)
+configure: failed program was:
+#line 1431 "configure"
+#include "confdefs.h"
+
+int main() {
+
+#ifndef __CYGWIN__
+#define __CYGWIN__ __CYGWIN32__
+#endif
+return __CYGWIN__;
+; return 0; }
+configure:1459: checking for mingw32 environment
+configure:1471: gcc -c -g -O2 -Wall  conftest.c 1>&5
+configure: In function `main':
+configure:1467: `__MINGW32__' undeclared (first use in this function)
+configure:1467: (Each undeclared identifier is reported only once
+configure:1467: for each function it appears in.)
+configure: failed program was:
+#line 1464 "configure"
+#include "confdefs.h"
+
+int main() {
+return __MINGW32__;
+; return 0; }
+configure:1563: checking host system type
+configure:1584: checking build system type
+configure:1613: checking for ld used by GCC
+configure:1681: checking if the linker (/usr/bin/ld) is GNU ld
+GNU ld version 2.11.93.0.2 20020207
+configure:1698: checking for /usr/bin/ld option to reload object files
+configure:1710: checking for BSD-compatible nm
+configure:1748: checking how to recognise dependant libraries
+configure:1931: checking for object suffix
+configure:1937: gcc -c -g -O2 -Wall  conftest.c 1>&5
+configure:1957: checking for executable suffix
+configure:1967: gcc -o conftest -g -O2 -Wall   conftest.c  1>&5
+configure:1998: checking command to parse /usr/bin/nm -B output
+configure:2078: gcc -c -g -O2 -Wall  conftest.c 1>&5
+configure:2081: /usr/bin/nm -B conftest.o | sed -n -e 's/^.*[ ]\([ABCDGISTW][ABCDGISTW]*\)[ ][ ]*\(\)\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2\3 \3/p' > conftest.nm
+configure:2132: gcc -o conftest -g -O2 -Wall   conftest.c conftstm.o 1>&5
+conftest.c:6: warning: `main' is usually a function
+configure:2181: checking for dlfcn.h
+configure:2191: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2359: checking for ranlib
+configure:2426: checking for strip
+configure:2669: checking for objdir
+configure:2696: checking for gcc option to produce PIC
+configure:2848: checking if gcc PIC flag -fPIC works
+configure:2862: gcc -c -g -O2 -Wall -fPIC -DPIC  conftest.c 1>&5
+configure:2914: checking if gcc static flag -static works
+configure:2929: gcc -o conftest -g -O2 -Wall   -static conftest.c  1>&5
+configure:2956: checking if gcc supports -c -o file.o
+configure:2975: gcc -c -g -O2 -Wall -o out/conftest2.o  conftest.c 1>&5
+configure:3004: checking if gcc supports -c -o file.lo
+configure:3022: gcc -c -g -O2 -Wall -c -o conftest.lo  conftest.c 1>&5
+configure: In function `main':
+configure:3018: warning: unused variable `some_variable'
+configure:3072: checking if gcc supports -fno-rtti -fno-exceptions
+configure:3085: gcc -c -g -O2 -Wall -fno-rtti -fno-exceptions -c conftest.c  conftest.c 1>&5
+configure: In function `main':
+configure:3081: warning: unused variable `some_variable'
+configure: In function `main':
+configure:3081: warning: unused variable `some_variable'
+configure:3112: checking whether the linker (/usr/bin/ld) supports shared libraries
+configure:3796: checking how to hardcode library paths into programs
+configure:3824: checking whether stripping libraries is possible
+configure:3838: checking dynamic linker characteristics
+configure:4235: checking if libtool supports shared libraries
+configure:4239: checking whether to build shared libraries
+configure:4262: checking whether to build static libraries
+configure:4798: checking whether -lc should be explicitly linked in
+configure:4805: gcc -c -g -O2 -Wall  conftest.c 1>&5
+conftest.c:1: warning: `dummy' defined but not used
+configure:4818: gcc -shared conftest.o  -v -Wl,-soname -Wl,conftest -o conftest 2>&1 | grep  -lc  >/dev/null 2>&1
+configure:5403: checking for socket in -lsocket
+configure:5422: gcc -o conftest -g -O2 -Wall   conftest.c -lsocket   1>&5
+/usr/bin/ld: cannot find -lsocket
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 5411 "configure"
+#include "confdefs.h"
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char socket();
+
+int main() {
+socket()
+; return 0; }
+configure:5450: checking for inet_aton in -lresolv
+configure:5469: gcc -o conftest -g -O2 -Wall   conftest.c -lresolv   1>&5
+configure:5497: checking for clock_gettime in -lrt
+configure:5516: gcc -o conftest -g -O2 -Wall   conftest.c -lrt  -lresolv  1>&5
+configure:5544: checking for inet_ntoa in -lnsl
+configure:5563: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl  -lrt -lresolv  1>&5
+configure:5592: checking for ANSI C header files
+configure:5605: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5672: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure: In function `main':
+configure:5667: warning: implicit declaration of function `exit'
+configure:5699: checking for fcntl.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for stdarg.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for inttypes.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for stdint.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for stddef.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for poll.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for signal.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for unistd.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for sys/epoll.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5705:23: sys/epoll.h: No such file or directory
+configure: failed program was:
+#line 5704 "configure"
+#include "confdefs.h"
+#include <sys/epoll.h>
+configure:5699: checking for sys/time.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for sys/queue.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for sys/event.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5705:23: sys/event.h: No such file or directory
+configure: failed program was:
+#line 5704 "configure"
+#include "confdefs.h"
+#include <sys/event.h>
+configure:5699: checking for sys/param.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for sys/ioctl.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for sys/select.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for sys/devpoll.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5705:25: sys/devpoll.h: No such file or directory
+configure: failed program was:
+#line 5704 "configure"
+#include "confdefs.h"
+#include <sys/devpoll.h>
+configure:5699: checking for port.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5705:18: port.h: No such file or directory
+configure: failed program was:
+#line 5704 "configure"
+#include "confdefs.h"
+#include <port.h>
+configure:5699: checking for netinet/in6.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5705:25: netinet/in6.h: No such file or directory
+configure: failed program was:
+#line 5704 "configure"
+#include "confdefs.h"
+#include <netinet/in6.h>
+configure:5699: checking for sys/socket.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5699: checking for sys/uio.h
+configure:5709: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:5737: checking for TAILQ_FOREACH in sys/queue.h
+configure:5767: checking for timeradd in sys/time.h
+configure:5797: checking for timercmp in sys/time.h
+configure:5827: checking for timerclear in sys/time.h
+configure:5857: checking for timerisset in sys/time.h
+configure:5886: checking for WIN32
+configure:5899: gcc -c -g -O2 -Wall  conftest.c 1>&5
+configure:5893:10: #error 
+configure: failed program was:
+#line 5888 "configure"
+#include "confdefs.h"
+
+int main() {
+
+	#ifndef WIN32
+	#error
+	#endif
+	
+; return 0; }
+configure:5921: checking for working const
+configure:5975: gcc -c -g -O2 -Wall  conftest.c 1>&5
+configure: In function `main':
+configure:5949: warning: unused variable `s'
+configure:5969: warning: unused variable `foo'
+configure:5937: warning: unused variable `zero'
+configure:5931: warning: unused variable `x'
+configure:5948: warning: `t' might be used uninitialized in this function
+configure:5966: warning: `b' might be used uninitialized in this function
+configure:5996: checking for inline
+configure:6010: gcc -c -g -O2 -Wall  conftest.c 1>&5
+configure: In function `main':
+configure:6006: warning: control reaches end of non-void function
+configure: At top level:
+configure:6006: warning: return type defaults to `int'
+configure:6036: checking whether time.h and sys/time.h may both be included
+configure:6050: gcc -c -g -O2 -Wall  conftest.c 1>&5
+configure: In function `main':
+configure:6046: warning: unused variable `tp'
+configure:6074: checking for gettimeofday
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6074: checking for vasprintf
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6074: checking for fcntl
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6074: checking for clock_gettime
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6074: checking for strtok_r
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6074: checking for strsep
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6074: checking for getaddrinfo
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6074: checking for getnameinfo
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6074: checking for strlcpy
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+/tmp/ccbq2OJT.o: In function `main':
+/cvsroot/svn/levent/trunk/libevent/configure:6096: undefined reference to `strlcpy'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 6079 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char strlcpy(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char strlcpy();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_strlcpy) || defined (__stub___strlcpy)
+choke me
+#else
+strlcpy();
+#endif
+
+; return 0; }
+configure:6074: checking for inet_ntop
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6074: checking for signal
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6074: checking for sigaction
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6074: checking for strtoll
+configure:6102: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6128: checking size of long
+configure:6147: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5
+configure:6180: checking for F_SETFD in fcntl.h
+configure:6212: checking for select
+configure:6240: gcc -o conftest -g -O2 -Wall   conftest.c -lnsl -lrt -lresolv  1>&5

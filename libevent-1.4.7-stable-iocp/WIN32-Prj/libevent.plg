@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: libevent - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP253.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\\" /I "..\WIN32-Code" /I "..\compat" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /D "HAVE_CONFIG_H" /Fp"Debug/libevent.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\buffer.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\evbuffer.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\evdns.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\event.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\event_tagging.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\evutil.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\http.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\log.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\WIN32-Code\misc.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\signal.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\strlcpy.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\WIN32-Code\win32.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\WIN32-Code\win32iocp.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP253.tmp" 
+Creating temporary file "C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP254.tmp" with contents
+[
+/nologo /out:"Debug\libevent.lib" 
+".\Debug\buffer.obj"
+".\Debug\evbuffer.obj"
+".\Debug\evdns.obj"
+".\Debug\event.obj"
+".\Debug\event_tagging.obj"
+".\Debug\evutil.obj"
+".\Debug\http.obj"
+".\Debug\log.obj"
+".\Debug\misc.obj"
+".\Debug\signal.obj"
+".\Debug\strlcpy.obj"
+".\Debug\win32.obj"
+".\Debug\win32iocp.obj"
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP254.tmp"
+<h3>Output Window</h3>
+Compiling...
+buffer.c
+e:\vmshare\libevent-1.4.7-stable-iocp-1\buffer.c(164) : warning C4018: '<' : signed/unsigned mismatch
+e:\vmshare\libevent-1.4.7-stable-iocp-1\buffer.c(373) : warning C4018: '>' : signed/unsigned mismatch
+evbuffer.c
+evdns.c
+event.c
+e:\vmshare\libevent-1.4.7-stable-iocp-1\evdns.c(1716) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\evdns.c(1611) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\evdns.c(1612) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\evdns.c(1613) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\evdns.c(1614) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\evdns.c(1624) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\evdns.c(1625) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\evdns.c(1359) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\evdns.c(1219) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\evdns.c(2092) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\evdns.c(2217) : warning C4761: integral size mismatch in argument; conversion supplied
+event_tagging.c
+e:\vmshare\libevent-1.4.7-stable-iocp-1\event.c(393) : warning C4761: integral size mismatch in argument; conversion supplied
+evutil.c
+http.c
+e:\vmshare\libevent-1.4.7-stable-iocp-1\http.c(828) : warning C4244: 'function' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+e:\vmshare\libevent-1.4.7-stable-iocp-1\http.c(829) : warning C4244: 'function' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+e:\vmshare\libevent-1.4.7-stable-iocp-1\http.c(893) : warning C4244: 'function' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+e:\vmshare\libevent-1.4.7-stable-iocp-1\http.c(894) : warning C4244: 'function' : conversion from '__int64 ' to 'unsigned int ', possible loss of data
+log.c
+e:\vmshare\libevent-1.4.7-stable-iocp-1\http.c(893) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\http.c(894) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\http.c(828) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\http.c(829) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\http.c(2495) : warning C4761: integral size mismatch in argument; conversion supplied
+misc.c
+signal.c
+strlcpy.c
+e:\vmshare\libevent-1.4.7-stable-iocp-1\signal.c(319) : warning C4761: integral size mismatch in argument; conversion supplied
+win32.c
+e:\vmshare\libevent-1.4.7-stable-iocp-1\win32-code\win32.c(188) : warning C4018: '==' : signed/unsigned mismatch
+e:\vmshare\libevent-1.4.7-stable-iocp-1\win32-code\win32.c(216) : warning C4018: '!=' : signed/unsigned mismatch
+e:\vmshare\libevent-1.4.7-stable-iocp-1\win32-code\win32.c(382) : warning C4018: '<' : signed/unsigned mismatch
+e:\vmshare\libevent-1.4.7-stable-iocp-1\win32-code\win32.c(388) : warning C4018: '<' : signed/unsigned mismatch
+e:\vmshare\libevent-1.4.7-stable-iocp-1\win32-code\win32.c(394) : warning C4018: '<' : signed/unsigned mismatch
+win32iocp.c
+Creating library...
+
+
+
+<h3>Results</h3>
+libevent.lib - 0 error(s), 29 warning(s)
+</pre>
+</body>
+</html>

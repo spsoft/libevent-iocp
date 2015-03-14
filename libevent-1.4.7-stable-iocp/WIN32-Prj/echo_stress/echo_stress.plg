@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: echo_stress - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP257.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\..\\" /I "..\..\WIN32-Code" /I "..\..\compat" /I "..\..\include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "HAVE_CONFIG_H" /Fp"Debug/echo_stress.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\sample\echo-stress.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP257.tmp" 
+Creating temporary file "C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP258.tmp" with contents
+[
+libevent.lib ws2_32.lib mswsock.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/echo_stress.pdb" /debug /machine:I386 /out:"Debug/echo_stress.exe" /pdbtype:sept /libpath:"..\Debug" 
+".\Debug\echo-stress.obj"
+"\vmshare\libevent-1.4.7-stable-iocp-1\WIN32-Prj\Debug\libevent.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP258.tmp"
+<h3>Output Window</h3>
+Compiling...
+echo-stress.c
+e:\vmshare\libevent-1.4.7-stable-iocp-1\sample\echo-stress.c(186) : warning C4761: integral size mismatch in argument; conversion supplied
+Linking...
+LINK : warning LNK4098: defaultlib "LIBCMTD" conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+
+<h3>Results</h3>
+echo_stress.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

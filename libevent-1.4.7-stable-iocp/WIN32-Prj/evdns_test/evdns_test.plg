@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: evdns_test - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP25D.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\..\\" /I "..\..\WIN32-Code" /I "..\..\compat" /I "..\..\include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "HAVE_CONFIG_H" /Fp"Debug/evdns_test.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\sample\evdns-test.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP25D.tmp" 
+Creating command line "link.exe libevent.lib ws2_32.lib mswsock.lib advapi32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/evdns_test.pdb" /debug /machine:I386 /out:"Debug/evdns_test.exe" /pdbtype:sept /libpath:"..\Debug"  ".\Debug\evdns-test.obj" "
+<h3>Output Window</h3>
+Compiling...
+evdns-test.c
+Linking...
+
+
+
+<h3>Results</h3>
+evdns_test.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

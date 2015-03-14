@@ -1,0 +1,77 @@
+--- libevent-1.4.7-stable/evdns.c	Mon Jul 14 04:19:06 2008
++++ /mnt/hgfs/stephen/libevent-1.4.7-stable-iocp-1/evdns.c	Tue Sep  2 14:10:28 2008
+@@ -1804,7 +1804,9 @@
+ /* Free all storage held by an evdns_server_port.  Only called when  */
+ static void
+ server_port_free(struct evdns_server_port *port)
+-{
++{
++	(void) event_del(&port->event);
++
+ 	assert(port);
+ 	assert(!port->refcnt);
+ 	assert(!port->pending_replies);
+@@ -1812,7 +1814,6 @@
+ 		CLOSE_SOCKET(port->socket);
+ 		port->socket = -1;
+ 	}
+-	(void) event_del(&port->event);
+ 	/* XXXX actually free the port? -NM */
+ }
+ 
+@@ -3008,9 +3009,9 @@
+ 
+ 	for (server = server_head; server; server = server_next) {
+ 		server_next = server->next;
++		(void) event_del(&server->event);
+ 		if (server->socket >= 0)
+ 			CLOSE_SOCKET(server->socket);
+-		(void) event_del(&server->event);
+ 		if (server->state == 0)
+                         (void) event_del(&server->timeout_event);
+ 		free(server);
+
+
+
+--- libevent-1.4.7-stable/event.c	Fri Jul 25 09:33:06 2008
++++ /mnt/hgfs/stephen/libevent-1.4.7-stable-iocp-1/event.c	Tue Sep  2 13:50:28 2008
+@@ -74,7 +74,10 @@
+ #ifdef HAVE_DEVPOLL
+ extern const struct eventop devpollops;
+ #endif
+-#ifdef WIN32
++#ifdef WIN32
++#ifndef _EVENT_NOIOCP
++extern const struct eventop win32iocpops;
++#endif
+ extern const struct eventop win32ops;
+ #endif
+ 
+@@ -98,7 +101,10 @@
+ #ifdef HAVE_SELECT
+ 	&selectops,
+ #endif
+-#ifdef WIN32
++#ifdef WIN32
++#ifndef _EVENT_NOIOCP
++	&win32iocpops,
++#endif
+ 	&win32ops,
+ #endif
+ 	NULL
+
+
+
+--- libevent-1.4.7-stable/event.h	Thu May 29 14:43:46 2008
++++ /mnt/hgfs/stephen/libevent-1.4.7-stable-iocp-1/event.h	Tue Sep  2 13:35:04 2008
+@@ -196,7 +196,8 @@
+ #define EV_READ		0x02
+ #define EV_WRITE	0x04
+ #define EV_SIGNAL	0x08
+-#define EV_PERSIST	0x10	/* Persistant event */
++#define EV_PERSIST	0x10	/* Persistant event */
++#define EV_CONNECT  0x20
+ 
+ /* Fix so that ppl dont have to run with <sys/queue.h> */
+ #ifndef TAILQ_ENTRY
+

@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: regress - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP261.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "..\..\\" /I "..\..\WIN32-Code\\" /I "..\..\compat" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "HAVE_CONFIG_H" /FR"Debug/" /Fp"Debug/regress.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\test\regress.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\test\regress_dns.c"
+"E:\vmshare\libevent-1.4.7-stable-iocp-1\test\regress_http.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP261.tmp" 
+Creating temporary file "C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP262.tmp" with contents
+[
+libevent.lib ws2_32.lib mswsock.lib advapi32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/regress.pdb" /debug /machine:I386 /out:"Debug/regress.exe" /pdbtype:sept /libpath:"..\Debug" 
+".\Debug\regress.obj"
+".\Debug\regress_dns.obj"
+".\Debug\regress_http.obj"
+"\vmshare\libevent-1.4.7-stable-iocp-1\WIN32-Prj\Debug\libevent.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\stephen\LOCALS~1\Temp\RSP262.tmp"
+<h3>Output Window</h3>
+Compiling...
+regress.c
+regress_dns.c
+regress_http.c
+e:\vmshare\libevent-1.4.7-stable-iocp-1\test\regress_http.c(317) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\test\regress_http.c(349) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\test\regress_http.c(84) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\vmshare\libevent-1.4.7-stable-iocp-1\test\regress_http.c(930) : warning C4761: integral size mismatch in argument; conversion supplied
+Linking...
+
+
+
+<h3>Results</h3>
+regress.exe - 0 error(s), 4 warning(s)
+</pre>
+</body>
+</html>

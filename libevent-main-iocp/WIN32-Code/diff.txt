@@ -1,0 +1,118 @@
+diff -ur libevent/event.c /mnt/hgfs/stephen/libevent-main/event.c
+--- libevent/event.c	Thu Jun  5 20:33:38 2008
++++ /mnt/hgfs/stephen/libevent-main/event.c	Fri Jun 13 21:10:46 2008
+@@ -86,6 +86,9 @@
+ extern const struct eventop devpollops;
+ #endif
+ #ifdef WIN32
++#ifndef _EVENT_NOIOCP
++extern const struct eventop win32iocpops;
++#endif
+ extern const struct eventop win32ops;
+ #endif
+ 
+@@ -110,6 +113,9 @@
+ 	&selectops,
+ #endif
+ #ifdef WIN32
++#ifndef _EVENT_NOIOCP
++	&win32iocpops,
++#endif
+ 	&win32ops,
+ #endif
+ 	NULL
+
+diff -ur libevent/evrpc.c /mnt/hgfs/stephen/libevent-main/evrpc.c
+--- libevent/evrpc.c	Thu Jun  5 20:33:38 2008
++++ /mnt/hgfs/stephen/libevent-main/evrpc.c	Thu Jun 12 22:53:44 2008
+@@ -97,10 +97,10 @@
+ 		assert(evrpc_unregister_rpc(base, rpc->uri));
+ 	}
+ 	while ((hook = TAILQ_FIRST(&base->input_hooks)) != NULL) {
+-		assert(evrpc_remove_hook(base, INPUT, hook));
++		assert(evrpc_remove_hook(base, EVRPC_INPUT, hook));
+ 	}
+ 	while ((hook = TAILQ_FIRST(&base->output_hooks)) != NULL) {
+-		assert(evrpc_remove_hook(base, OUTPUT, hook));
++		assert(evrpc_remove_hook(base, EVRPC_OUTPUT, hook));
+ 	}
+ 	mm_free(base);
+ }
+@@ -115,14 +115,14 @@
+ 	struct evrpc_hook_list *head = NULL;
+ 	struct evrpc_hook *hook = NULL;
+ 	switch (hook_type) {
+-	case INPUT:
++	case EVRPC_INPUT:
+ 		head = &base->in_hooks;
+ 		break;
+-	case OUTPUT:
++	case EVRPC_OUTPUT:
+ 		head = &base->out_hooks;
+ 		break;
+ 	default:
+-		assert(hook_type == INPUT || hook_type == OUTPUT);
++		assert(hook_type == EVRPC_INPUT || hook_type == EVRPC_OUTPUT);
+ 	}
+ 
+ 	hook = mm_calloc(1, sizeof(struct evrpc_hook));
+@@ -160,14 +160,14 @@
+ 	struct _evrpc_hooks *base = vbase;
+ 	struct evrpc_hook_list *head = NULL;
+ 	switch (hook_type) {
+-	case INPUT:
++	case EVRPC_INPUT:
+ 		head = &base->in_hooks;
+ 		break;
+-	case OUTPUT:
++	case EVRPC_OUTPUT:
+ 		head = &base->out_hooks;
+ 		break;
+ 	default:
+-		assert(hook_type == INPUT || hook_type == OUTPUT);
++		assert(hook_type == EVRPC_INPUT || hook_type == EVRPC_OUTPUT);
+ 	}
+ 
+ 	return (evrpc_remove_hook_internal(head, handle));
+@@ -525,11 +525,11 @@
+ 	}
+ 
+ 	while ((hook = TAILQ_FIRST(&pool->input_hooks)) != NULL) {
+-		assert(evrpc_remove_hook(pool, INPUT, hook));
++		assert(evrpc_remove_hook(pool, EVRPC_INPUT, hook));
+ 	}
+ 
+ 	while ((hook = TAILQ_FIRST(&pool->output_hooks)) != NULL) {
+-		assert(evrpc_remove_hook(pool, OUTPUT, hook));
++		assert(evrpc_remove_hook(pool, EVRPC_OUTPUT, hook));
+ 	}
+ 
+ 	mm_free(pool);
+
+diff -ur libevent/evrpc.h /mnt/hgfs/stephen/libevent-main/evrpc.h
+--- libevent/evrpc.h	Thu Jun  5 20:33:38 2008
++++ /mnt/hgfs/stephen/libevent-main/evrpc.h	Thu Jun 12 23:02:30 2008
+@@ -429,8 +429,8 @@
+  */
+ 
+ enum EVRPC_HOOK_TYPE {
+-	INPUT,		/**< apply the function to an input hook */
+-	OUTPUT		/**< apply the function to an output hook */
++	EVRPC_INPUT,		/**< apply the function to an input hook */
++	EVRPC_OUTPUT		/**< apply the function to an output hook */
+ };
+ 
+ /**
+
+diff -ur libevent/include/event2/event.h /mnt/hgfs/stephen/libevent-main/include/event2/event.h
+--- libevent/include/event2/event.h	Thu Jun  5 20:33:20 2008
++++ /mnt/hgfs/stephen/libevent-main/include/event2/event.h	Thu Jun 12 23:04:46 2008
+@@ -311,6 +311,7 @@
+ #define EV_PERSIST	0x10
+ /** Select edge-triggered behavior, if supported by the backend. */
+ #define EV_ET       0x20
++#define EV_ACCEPT   0x40
+ 
+ /**
+   Define a timer event.
+

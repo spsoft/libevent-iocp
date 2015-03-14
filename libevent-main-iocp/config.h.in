@@ -1,0 +1,225 @@
+/* config.h.in.  Generated automatically from configure.in by autoheader.  */
+
+/* Define to empty if the keyword does not work.  */
+#undef const
+
+/* Define as __inline if that's what the C compiler calls it.  */
+#undef inline
+
+/* Define to `int' if <sys/types.h> doesn't define.  */
+#undef pid_t
+
+/* Define to `unsigned' if <sys/types.h> doesn't define.  */
+#undef size_t
+
+/* Define if you have the ANSI C header files.  */
+#undef STDC_HEADERS
+
+/* Define if you can safely include both <sys/time.h> and <time.h>.  */
+#undef TIME_WITH_SYS_TIME
+
+/* The number of bytes in a int.  */
+#undef SIZEOF_INT
+
+/* The number of bytes in a long.  */
+#undef SIZEOF_LONG
+
+/* The number of bytes in a long long.  */
+#undef SIZEOF_LONG_LONG
+
+/* The number of bytes in a short.  */
+#undef SIZEOF_SHORT
+
+/* Define if you have the clock_gettime function.  */
+#undef HAVE_CLOCK_GETTIME
+
+/* Define if you have the epoll_ctl function.  */
+#undef HAVE_EPOLL_CTL
+
+/* Define if you have the fcntl function.  */
+#undef HAVE_FCNTL
+
+/* Define if you have the getaddrinfo function.  */
+#undef HAVE_GETADDRINFO
+
+/* Define if you have the getnameinfo function.  */
+#undef HAVE_GETNAMEINFO
+
+/* Define if you have the gettimeofday function.  */
+#undef HAVE_GETTIMEOFDAY
+
+/* Define if you have the inet_ntop function.  */
+#undef HAVE_INET_NTOP
+
+/* Define if you have the kqueue function.  */
+#undef HAVE_KQUEUE
+
+/* Define if you have the poll function.  */
+#undef HAVE_POLL
+
+/* Define if you have the port_create function.  */
+#undef HAVE_PORT_CREATE
+
+/* Define if you have the select function.  */
+#undef HAVE_SELECT
+
+/* Define if you have the sigaction function.  */
+#undef HAVE_SIGACTION
+
+/* Define if you have the signal function.  */
+#undef HAVE_SIGNAL
+
+/* Define if you have the strlcpy function.  */
+#undef HAVE_STRLCPY
+
+/* Define if you have the strsep function.  */
+#undef HAVE_STRSEP
+
+/* Define if you have the strtok_r function.  */
+#undef HAVE_STRTOK_R
+
+/* Define if you have the strtoll function.  */
+#undef HAVE_STRTOLL
+
+/* Define if you have the vasprintf function.  */
+#undef HAVE_VASPRINTF
+
+/* Define if you have the <dlfcn.h> header file.  */
+#undef HAVE_DLFCN_H
+
+/* Define if you have the <fcntl.h> header file.  */
+#undef HAVE_FCNTL_H
+
+/* Define if you have the <inttypes.h> header file.  */
+#undef HAVE_INTTYPES_H
+
+/* Define if you have the <netinet/in6.h> header file.  */
+#undef HAVE_NETINET_IN6_H
+
+/* Define if you have the <poll.h> header file.  */
+#undef HAVE_POLL_H
+
+/* Define if you have the <port.h> header file.  */
+#undef HAVE_PORT_H
+
+/* Define if you have the <signal.h> header file.  */
+#undef HAVE_SIGNAL_H
+
+/* Define if you have the <stdarg.h> header file.  */
+#undef HAVE_STDARG_H
+
+/* Define if you have the <stddef.h> header file.  */
+#undef HAVE_STDDEF_H
+
+/* Define if you have the <stdint.h> header file.  */
+#undef HAVE_STDINT_H
+
+/* Define if you have the <sys/devpoll.h> header file.  */
+#undef HAVE_SYS_DEVPOLL_H
+
+/* Define if you have the <sys/epoll.h> header file.  */
+#undef HAVE_SYS_EPOLL_H
+
+/* Define if you have the <sys/event.h> header file.  */
+#undef HAVE_SYS_EVENT_H
+
+/* Define if you have the <sys/ioctl.h> header file.  */
+#undef HAVE_SYS_IOCTL_H
+
+/* Define if you have the <sys/param.h> header file.  */
+#undef HAVE_SYS_PARAM_H
+
+/* Define if you have the <sys/queue.h> header file.  */
+#undef HAVE_SYS_QUEUE_H
+
+/* Define if you have the <sys/select.h> header file.  */
+#undef HAVE_SYS_SELECT_H
+
+/* Define if you have the <sys/socket.h> header file.  */
+#undef HAVE_SYS_SOCKET_H
+
+/* Define if you have the <sys/time.h> header file.  */
+#undef HAVE_SYS_TIME_H
+
+/* Define if you have the <sys/uio.h> header file.  */
+#undef HAVE_SYS_UIO_H
+
+/* Define if you have the <unistd.h> header file.  */
+#undef HAVE_UNISTD_H
+
+/* Define if you have the nsl library (-lnsl).  */
+#undef HAVE_LIBNSL
+
+/* Define if you have the resolv library (-lresolv).  */
+#undef HAVE_LIBRESOLV
+
+/* Define if you have the rt library (-lrt).  */
+#undef HAVE_LIBRT
+
+/* Define if you have the socket library (-lsocket).  */
+#undef HAVE_LIBSOCKET
+
+/* Name of package */
+#undef PACKAGE
+
+/* Version number of package */
+#undef VERSION
+
+/* Define if TAILQ_FOREACH is defined in <sys/queue.h> */
+#undef HAVE_TAILQFOREACH
+
+/* Define if timeradd is defined in <sys/time.h> */
+#undef HAVE_TIMERADD
+
+/* Define if timercmp is defined in <sys/time.h> */
+#undef HAVE_TIMERCMP
+
+/* Define if timerclear is defined in <sys/time.h> */
+#undef HAVE_TIMERCLEAR
+
+/* Define if timerisset is defined in <sys/time.h> */
+#undef HAVE_TIMERISSET
+
+/* Define if clock_gettime is available in libc */
+#undef DNS_USE_CPU_CLOCK_FOR_ID
+
+/* Define is no secure id variant is available */
+#undef DNS_USE_GETTIMEOFDAY_FOR_ID
+
+/* Define if F_SETFD is defined in <fcntl.h> */
+#undef HAVE_SETFD
+
+/* Define if your system supports the epoll system calls */
+#undef HAVE_EPOLL
+
+/* Define if /dev/poll is available */
+#undef HAVE_DEVPOLL
+
+/* Define if kqueue works correctly with pipes */
+#undef HAVE_WORKING_KQUEUE
+
+/* Define if your system supports the epoll system calls */
+#undef HAVE_EPOLL
+
+/* Define if your system supports event ports */
+#undef HAVE_EVENT_PORTS
+
+/* Define to unsigned int if you dont have it */
+#undef socklen_t
+
+/* Define to appropriate substitue if compiler doesnt have __func__ */
+#undef __func__
+
+/* Define to appropriate substitue if compiler doesnt have __func__ */
+#undef __func__
+
+/* Define to necessary symbol if this constant
+                                uses a non-standard name on your system. */
+#undef PTHREAD_CREATE_JOINABLE
+
+/* Define if we have pthreads on this system */
+#undef HAVE_PTHREADS
+
+/* Define if libevent should not be compiled with thread support */
+#undef DISABLE_THREAD_SUPPORT
+
